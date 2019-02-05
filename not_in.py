@@ -4,7 +4,7 @@ import cStringIO
 
 
 ##### parse arguments
-parser = argparse.ArgumentParser(description="Simple script that gets all lines in file a but are not in file b. Essentially a set substruct A - B.")
+parser = argparse.ArgumentParser(description="Simple script that gets all lines in file a but are not in file b. Essentially a set subtract A - B.")
 parser.add_argument('-a', required=True, help="The name of file a.")
 parser.add_argument('-b', required=True, help="The name of file b.")
 parser.add_argument('-o', '--output', required=False, help="The name of the file to output to. Will print to stdout if none specified.")
