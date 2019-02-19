@@ -23,7 +23,9 @@ file_a = open(args.a, 'r')
 file_b = open(args.b, 'r')
 
 if args.output != None:
-    file_output = open(args.output, "w")
+    output = open(args.output, "w")
+else:
+    output = sys.stdout
 
 lines_in_a = set()
 lines_in_b = set()
@@ -37,9 +39,6 @@ for line in file_b:
 diff = lines_in_a - lines_in_b
 
 for each in diff:
-    if args.output != None:
-        file_output.write(each) 
-    else:
-        print(each)
+    output.write(each)
 
 ##### end #####
